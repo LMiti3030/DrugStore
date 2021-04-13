@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/clients")
+@RequestMapping("/drugstore/clients")
 public class ClientsController {
 
     @Autowired
@@ -30,6 +30,7 @@ public class ClientsController {
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     public Client create(@RequestBody final Client client){
+        //if(client.getDeliveryAddress())
         //TODO: validation that passed in values are ok, otherwise do nothing
         return clientRepository.saveAndFlush(client);
     }
