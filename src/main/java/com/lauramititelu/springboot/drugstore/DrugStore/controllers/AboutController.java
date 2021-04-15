@@ -17,8 +17,8 @@ public class AboutController {
     @Value("${app.creator}")
     private String  appCreator;
 
-    @GetMapping
-    @RequestMapping("/drugstore/about")
+    @GetMapping("/")
+    //@RequestMapping("/drugstore/about")
     public Map getInfo(){
         Map map = new HashMap<String, String>();
         map.put("App version", appVersion);
